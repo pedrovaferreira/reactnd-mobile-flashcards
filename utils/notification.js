@@ -51,7 +51,7 @@ export function setLocalNotification () {
     })
 }
 
-export function clearLocalNotification () {
+export function clearAndSetNewLocalNotification () {
   return AsyncStorage.removeItem(NOTIFICATION_KEY)
     .then(Notifications.cancelAllScheduledNotificationsAsync)
     .then(setLocalNotification)
